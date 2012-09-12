@@ -37,6 +37,7 @@ void VectorDispose(vector *v)
       v->freeFn((char *)v->elems + v->elemSize * i);
     }
   }
+  free(v->elems);
 }
 
 
